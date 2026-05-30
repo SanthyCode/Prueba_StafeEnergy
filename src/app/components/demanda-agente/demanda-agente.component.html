@@ -1,0 +1,21 @@
+<div class="panel-demanda">
+  <div class="controls-row">
+    <select [(ngModel)]="selectedAgentCode">
+      <option value="" disabled>Seleccione un Agente</option>
+      <option *ngFor="let a of agentes" [value]="a.codigo">
+        {{ a.codigo }} - {{ a.nombre }}
+      </option>
+    </select>
+
+    <input type="date" [(ngModel)]="fechaInicio">
+    <input type="date" [(ngModel)]="fechaFin">
+    
+    <button (click)="consultar()">Consultar Demanda</button>
+  </div>
+
+  <div *ngIf="loading">Procesando curva de demanda...</div>
+
+  <div class="card">
+    <div echarts [options]="chartOptions" style="height: 500px;"></div>
+  </div>
+</div>

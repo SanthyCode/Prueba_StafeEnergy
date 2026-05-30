@@ -1,0 +1,39 @@
+.panel-embalses {
+  padding: 24px;
+
+  h2 { margin-bottom: 20px; color: #1e293b; }
+
+  table {
+    width: 100%;
+    border-collapse: collapse;
+    font-family: sans-serif;
+
+    th {
+      background-color: #f8fafc;
+      text-align: left;
+      padding: 12px;
+      border: 1px solid #e2e8f0;
+      color: #64748b;
+    }
+
+    td {
+      padding: 12px;
+      border: 1px solid #e2e8f0;
+    }
+  }
+
+  // Estilos de alerta para los números
+  .text-red-600 { color: #dc2626; font-weight: bold; }
+  .text-green-600 { color: #16a34a; font-weight: bold; }
+
+  // Estilos para los "badges" de estado
+  .badge {
+    padding: 4px 8px;
+    border-radius: 4px;
+    font-size: 0.85rem;
+    font-weight: 500;
+  }
+
+  .bg-red-200 { background-color: #fecaca; color: #991b1b; }
+  .bg-green-200 { background-color: #bbf7d0; color: #166534; }
+}

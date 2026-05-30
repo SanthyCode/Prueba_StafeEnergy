@@ -1,0 +1,19 @@
+<div class="container p-4">
+  <div class="header mb-4">
+    <h2 class="text-xl font-bold">Precio de Bolsa Nacional</h2>
+    <input type="date" [(ngModel)]="fecha" (ngModelChange)="consultar()">
+  </div>
+
+  <div *ngIf="loading">Cargando datos de XM...</div>
+
+  <div class="grid" *ngIf="!loading && promedio > 0">
+    <div class="card p-4 shadow rounded border-l-4 border-green-500">
+      <h3 class="text-gray-500">PRECIO PROMEDIO DÍA</h3>
+      <p class="text-3xl font-bold">{{ promedio | number:'1.2-2' }} COP/kWh</p>
+    </div>
+
+    <div class="card p-4 shadow rounded mt-4">
+      <div echarts [options]="chartOptions" style="height: 400px;"></div>
+    </div>
+  </div>
+</div>

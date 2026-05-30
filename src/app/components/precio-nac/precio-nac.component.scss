@@ -1,0 +1,79 @@
+.dashboard-container {
+  padding: 20px;
+  background-color: #f8f9fa;
+  min-height: 100vh;
+}
+
+.panel-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 25px;
+  border-bottom: 2px solid #e9ecef;
+  padding-bottom: 15px;
+
+  h2 { margin: 0; color: #333; }
+
+  .controles input {
+    margin-left: 10px;
+    padding: 8px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+  }
+}
+
+.panel-grid {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+}
+
+.kpi-card {
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+  width: 250px;
+  text-align: center;
+  border-top: 4px solid #0056b3;
+
+  h3 { color: #6c757d; font-size: 14px; text-transform: uppercase; margin-bottom: 10px; }
+  .valor { font-size: 28px; font-weight: bold; color: #333; margin: 0; }
+  small { font-size: 14px; color: #888; }
+}
+
+.grafica-card {
+  flex: 1;
+  background: white;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+.chart-container {
+  width: 100%;
+  height: 400px;
+}
+
+.cargando {
+  text-align: center;
+  padding: 40px;
+  font-size: 16px;
+  color: #666;
+  background: white;
+  border-radius: 8px;
+  margin: 20px 0;
+
+  .chart-container {
+    height: 400px;
+    width: 100%;
+  }
+}
+
+.cargando {
+  padding: 20px;
+  background-color: #e7f3fe;
+  color: #31708f;
+  border-radius: 5px;
+  text-align: center;
+}

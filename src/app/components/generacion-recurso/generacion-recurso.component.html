@@ -1,0 +1,13 @@
+<div class="panel-generacion">
+  <div class="controls-row">
+    <input type="date" [(ngModel)]="fechaInicio">
+    <input type="date" [(ngModel)]="fechaFin">
+    <button (click)="consultar()">Consultar</button>
+  </div>
+
+  <div *ngIf="loading">Procesando Top 10...</div>
+
+  <div class="card">
+    <div echarts [options]="chartOptions" style="height: 500px;"></div>
+  </div>
+</div>

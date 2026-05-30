@@ -1,0 +1,28 @@
+<div class="panel-embalses">
+  <h2>Estado Hídrico: Embalses Críticos</h2>
+
+  <table>
+    <thead>
+      <tr>
+        <th>Embalse</th>
+        <th>Nivel (%)</th>
+        <th>Estado</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let emb of embalses">
+        <td>{{ emb.nombre }}</td>
+        
+        <td [ngClass]="{'text-danger': emb.valor < 0.30, 'text-success': emb.valor >= 0.30}">
+          {{ emb.valor }}%
+        </td>
+
+        <td>
+          <span class="badge" [ngClass]="{'bg-danger': emb.valor < 0.30, 'bg-success': emb.valor >= 0.30}">
+            {{ emb.valor < 0.30 ? 'Crítico' : 'Normal' }}
+          </span>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+</div>

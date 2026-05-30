@@ -1,0 +1,23 @@
+{
+  "/api/daily": {
+    "target": "https://servapibi.xm.com.co",
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel": "debug",
+    "pathRewrite": {
+      "^/api/daily": "/daily"
+    }
+  },
+  "/api": {
+    "target": "https://servapibi.xm.com.co",
+    "secure": true,
+    "changeOrigin": true,
+    "logLevel": "debug",
+    "pathRewrite": {
+      "^/api": ""
+    },
+    "headers": {
+      "Connection": "keep-alive"
+    }
+  }
+}
